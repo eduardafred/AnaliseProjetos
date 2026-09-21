@@ -12,7 +12,7 @@ class Pedido {
     public status: string = "Pendente";
 
     public calcularTotal(): number {
-        const subtotal = self = this.itens.reduce((acc, item) => acc + item.preco, 0);
+        const subtotal = this.itens.reduce((acc, item) => acc + item.preco, 0);
         return Math.max(0, subtotal - this.desconto);
     }
 }
