@@ -3,6 +3,7 @@ interface ItemPedido {
     preco: number;
 }
 
+
 class Pedido {
     public id: string = "";
     public itens: ItemPedido[] = [];
@@ -17,6 +18,7 @@ class Pedido {
     }
 }
 
+
 interface IPedidoBuilder {
     definirId(id: string): this;
     adicionarItem(nome: string, preco: number): this;
@@ -25,6 +27,7 @@ interface IPedidoBuilder {
     definirMetodoPagamento(metodo: string): this;
     construir(): Pedido;
 }
+
 
 class PedidoBuilder implements IPedidoBuilder {
     private pedido: Pedido;
